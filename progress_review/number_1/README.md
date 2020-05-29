@@ -22,7 +22,7 @@ Report       |
                 .count
 
                 if / iteration 
-                    - count greens 
+                    - count greens  
                     - count amber 
                     - count red 
                     - count uncounted
@@ -30,7 +30,7 @@ Report       |
 
 ## Input & Output:
 
-'Green' ----> 'Green: 1'
+'Green' ----> 'Green: 1' √√ 
 'Amber'----> 'Amber: 1'
 'Red' ---> 'Red: 1'
 
