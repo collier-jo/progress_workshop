@@ -33,11 +33,11 @@ describe Report do
 
     it "Multiple items in string" do 
       report = Report.new("Green, Green, Green")
-      expect(report.count).to eq(" Green: 3")
+      expect(report.count).to eq("Green: 3")
     end 
     it "Multiple items in string" do 
-      report = Report.new("Red, Red, Green")
-      expect(report.count).to eq(" Red: 2\n Green: 1")
+      report = Report.new(" Red, Red, Green")
+      expect(report.count).to eq("Red: 2\nGreen: 1")
     end 
   end 
 end 
