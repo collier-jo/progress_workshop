@@ -4,7 +4,6 @@ class Report
   end 
 
   def count
-
     report_array = @school_report.split(",")
 
     counter = 0 
@@ -19,8 +18,12 @@ class Report
       end 
     end 
 
+    print_array = []
+
     colour_hash.each do |key, value|
-      return "#{key}: #{value}"
+      print_array.push("#{key}: #{value}")
     end 
+
+    return print_array.join("\n")
   end
 end 
