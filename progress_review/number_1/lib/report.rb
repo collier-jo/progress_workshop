@@ -4,14 +4,23 @@ class Report
   end 
 
   def count
-    if @school_report == "Green"
-      return "Green: 1"
-    elsif @school_report == "Amber"
-      return "Amber: 1"
-    elsif @school_report == "Red"
-      return "Red: 1"
-    else 
-      return "Uncounted: 1"
+
+    report_array = @school_report.split(",")
+
+    counter = 0 
+
+    colour_hash = {}
+
+    report_array.each do |colour|
+      if colour_hash["#{colour}"] == nil
+        colour_hash["#{colour}"] = 1
+      else 
+        colour_hash["#{colour}"] += 1
+      end 
+    end 
+
+    colour_hash.each do |key, value|
+      return "#{key}: #{value}"
     end 
   end
 end 

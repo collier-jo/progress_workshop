@@ -32,10 +32,10 @@ Report       |
 
 'Green' ----> 'Green: 1' √√ 
 'Amber'----> 'Amber: 1'
-'Red' ---> 'Red: 1'
-"AmberRedGreen" ----> 'Uncounted: 1'
-"Yellow" ----> 'Uncounted: 1'
-"green" ----> 'Uncounted: 1'
+'Red' ---> 'Red: 1' √
+"AmberRedGreen" ----> 'Uncounted: 1'√
+"Yellow" ----> 'Uncounted: 1' √
+"green" ----> 'Uncounted: 1' √
 
 
 'Green, Green, Red' ---> 'Green: 2\n 

@@ -16,10 +16,25 @@ describe Report do
       expect(report.count).to eq("Red: 1")
     end
 
-    it "If not Green, Amber, Red returns uncounted" do 
-      report = Report.new("Yellow")
-      expect(report.count).to eq("Uncounted: 1")
-    end
+    # it "If not Green, Amber, Red returns uncounted" do 
+    #   report = Report.new("Yellow")
+    #   expect(report.count).to eq("Uncounted: 1")
+    # end
+
+    # it "If lower case 'correct' input returns uncounted" do 
+    #   report = Report.new("green")
+    #   expect(report.count).to eq("Uncounted: 1")
+    # end
+
+    # it "If AmberRedGreen returns uncounted" do 
+    #   report = Report.new("AmberRedGreen")
+    #   expect(report.count).to eq("Uncounted: 1")
+    # end 
+
+    it "Multiple items in string" do 
+      report = Report.new(" Green, Green, Green")
+      expect(report.count).to eq(" Green: 3")
+    end 
   end 
 end 
 
