@@ -10,8 +10,8 @@ class Report
       return "Amber: 1"
     elsif @school_report == "Red"
       return "Red: 1"
+    else 
+      return "Uncounted: 1"
     end 
-  end 
-  
+  end
 end 
-

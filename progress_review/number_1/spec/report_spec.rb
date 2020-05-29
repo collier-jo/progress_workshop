@@ -15,6 +15,11 @@ describe Report do
       report = Report.new("Red")
       expect(report.count).to eq("Red: 1")
     end
+
+    it "If not Green, Amber, Red returns uncounted" do 
+      report = Report.new("Yellow")
+      expect(report.count).to eq("Uncounted: 1")
+    end
   end 
 end 
 
