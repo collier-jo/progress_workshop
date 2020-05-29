@@ -8,6 +8,8 @@ class Report
       return "Green: 1"
     elsif @school_report == "Amber"
       return "Amber: 1"
+    elsif @school_report == "Red"
+      return "Red: 1"
     end 
   end 
   
