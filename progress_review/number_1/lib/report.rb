@@ -5,6 +5,7 @@ class Report
 
   def count
     report_array = @school_report.split(",")
+    ## remove 
 
     counter = 0 
 
