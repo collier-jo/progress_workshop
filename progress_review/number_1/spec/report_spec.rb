@@ -32,13 +32,18 @@ describe Report do
     # end 
 
     it "Multiple items in string" do 
-      report = Report.new("Green, Green, Green")
+      report = Report.new("Green,Green,Green")
       expect(report.count).to eq("Green: 3")
     end 
     it "Multiple items in string" do 
-      report = Report.new(" Red, Red, Green")
+      report = Report.new("Red,Red,Green")
       expect(report.count).to eq("Red: 2\nGreen: 1")
     end 
+  end 
+
+  it "Saves perfect outputs with multiple white spaces" do
+    report = Report.new("Red,   Red,Red")
+    expect(report.count).to eq ("Red: 3")
   end 
 end 
 
