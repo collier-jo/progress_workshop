@@ -5,6 +5,10 @@ class Scrabble{
   }
   
   score(){
-    return 0
+    if(this.word === " "){
+      return 0
+    }else{
+      return 0
+    }
   }
 }

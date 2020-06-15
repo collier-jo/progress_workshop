@@ -5,4 +5,9 @@ describe("Scrabble", function(){
     var scrabble = new Scrabble(" ")
     expect(scrabble.score()).toEqual(0)
   })
+
+  it("nil input outputs 0", function(){
+    var scrabble = new Scrabble(null)
+    expect(scrabble.score()).toEqual(0)
+  })
 })
