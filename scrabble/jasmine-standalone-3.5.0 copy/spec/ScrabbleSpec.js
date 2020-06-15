@@ -10,4 +10,9 @@ describe("Scrabble", function(){
     var scrabble = new Scrabble(null)
     expect(scrabble.score()).toEqual(0)
   })
+
+  it("scores 1 for input a", function(){
+    var scrabble = new Scrabble("a")
+    expect(scrabble.score()).toEqual(1)
+  })
 })

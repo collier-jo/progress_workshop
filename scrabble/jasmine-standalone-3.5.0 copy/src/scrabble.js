@@ -6,9 +6,14 @@ class Scrabble{
   
   score(){
     if(this.word === " "){
-      return 0
+      this.total += 0
+      return this.total
+    }else if(this.word === 'a'){
+      this.total += 1
+      return this.total
     }else{
-      return 0
+      this.total += 0
+      return this.total
     }
   }
 }
