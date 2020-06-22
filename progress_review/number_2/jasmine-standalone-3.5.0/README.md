@@ -20,4 +20,10 @@ Frequency within the array needs to be BELOW 1000
 
 Object | Message 
 -------|------
-frequencyChecker | takes in an array (music)
+frequencyChecker | takes in an array (music) √ 
+
+
+input | output 
+------|-----
+[40] | [40]
+[35] | [40]

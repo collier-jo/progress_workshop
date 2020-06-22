@@ -13,4 +13,11 @@ describe("frequencyChecker", function(){
     var checker = new FrequencyChecker([10, 100, 100, 1001])
     expect(checker.music).toEqual([10,100, 100, 1001])
   });
+
+  it("Take the checks a single array 40", function(){
+    var checker = new FrequencyChecker([40])
+    expect(checker.checkLower()).toEqual([40])
+  });
 })
+
+// argument of having the music not stored just output 
