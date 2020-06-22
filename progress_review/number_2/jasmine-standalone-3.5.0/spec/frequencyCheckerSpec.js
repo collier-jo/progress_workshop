@@ -18,6 +18,13 @@ describe("frequencyChecker", function(){
     var checker = new FrequencyChecker([40])
     expect(checker.checkLower()).toEqual([40])
   });
+
+  it("Raise values lower than 40", function(){
+    var checker = new FrequencyChecker([30])
+    expect(checker.checkLower()).toEqual("Frequency below 40")
+  });
+
+
 })
 
 // argument of having the music not stored just output 
