@@ -8,15 +8,16 @@ input can be a paragraph
     no puntucation
 All british english 
 Supplying a dictionary 
+Varied cases 
 
 
 
 
-input | out
+input | output |
 |----|----|
 |dKDJNF| ~dKDJNF~ |
 |.ksejbg skjfbf | ~.ksejbg~ ~skjfbf~ |
-|Hi my name iss Jo|  Hi my name ~iss~ Jo
+|Hi my name iss Jo|  Hi my name ~iss~ Jo| 
 
 
 ## Domain Model 
@@ -24,5 +25,5 @@ Object | Message |
 |------| --------|
 |SpellChecker||
 ||.checker |
-|| 
+||.library |
 

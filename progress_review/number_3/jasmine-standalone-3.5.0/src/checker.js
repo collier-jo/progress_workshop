@@ -6,11 +6,23 @@ class SpellChecker {
 
     for(var i = 0; i < wordArray.length; i ++){
       var singleWord = wordArray[i]
-      var wrongWord = `~${singleWord}~`
-      checkedArray.push(wrongWord)
+      var checkedWord = this.library(singleWord)
+      checkedArray.push(checkedWord)
     }
     var checkedString = checkedArray.join(" ")
 
     return checkedString
   };
+
+  library(text){
+    var correctWords = ["is", "my", "name", "jo"]
+
+    if(!correctWords.includes(text)){
+      return `~${text}~`
+    } else {
+      return text
+    }
+  }
 };
+
+// .library(text)
