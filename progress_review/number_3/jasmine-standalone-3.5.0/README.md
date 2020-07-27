@@ -10,6 +10,9 @@ All british english
 Supplying a dictionary 
 Varied cases 
 
+<!-- // a little longer for the finding the requiremets 
+// consider some complex input out BUT address slowly 
+-->
 
 
 

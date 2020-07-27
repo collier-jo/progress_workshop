@@ -5,8 +5,7 @@ describe("Checker", function(){
   var checkertest 
 
   beforeEach(function(){
-    checkertest = new SpellChecker
-
+    checkertest = new SpellChecker()
   })
 
   it("Add ~ onto misspelt word hello", function(){
@@ -24,12 +23,10 @@ describe("Checker", function(){
   it("Checks words against a library", function(){
     expect(checkertest.library("iss")).toEqual("~iss~")
   })
+  // coupled this 
+  // should have been ALL in one then refactor out 
 
   it("Checks a sentence with correct and incorrect words", function(){
     expect(checkertest.checker("my name iss jo")).toEqual("my name ~iss~ jo")
   })
-
-
-
-
 })

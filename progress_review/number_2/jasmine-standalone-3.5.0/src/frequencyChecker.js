@@ -14,5 +14,13 @@
       }
     }
 
+    FrequencyChecker.prototype.raiseToLowerBoundry = function(){
+      if(this.music[0] < 40){
+        this.music[0] = [40]
+        console.log(this.music[0])
+        return this.music[0]
+      }
+    }
+
     exports.FrequencyChecker = FrequencyChecker;
 })(this);

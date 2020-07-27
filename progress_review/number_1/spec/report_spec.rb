@@ -45,6 +45,11 @@ describe Report do
     report = Report.new("Red,   Red,Red")
     expect(report.count).to eq ("Red: 3")
   end 
+
+  it "Saves perfect input with no commas" do 
+    report = Report.new("Red Red Green") 
+    expect(report.count).to eq ("Red: 2\nGreen:1")
+  end 
 end 
 
 ## Report new repeated 

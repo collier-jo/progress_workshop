@@ -4,8 +4,9 @@ class Report
   end 
 
   def count
+
+    
     report_array = @school_report.gsub(/\s+/, "").split(",")
-    ## remove 
 
     counter = 0 
 

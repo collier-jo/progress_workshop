@@ -19,9 +19,14 @@ describe("frequencyChecker", function(){
     expect(checker.checkLower()).toEqual([40])
   });
 
-  it("Raise values lower than 40", function(){
+  // it("Raise statement if lower than 40", function(){
+  //   var checker = new FrequencyChecker([30])
+  //   expect(checker.checkLower()).toEqual("Frequency below 40")
+  // });
+
+  it("Raises value of array if below 40", function(){
     var checker = new FrequencyChecker([30])
-    expect(checker.checkLower()).toEqual("Frequency below 40")
+    expect(checker.checkLower()).toEqual([40])
   });
 
 

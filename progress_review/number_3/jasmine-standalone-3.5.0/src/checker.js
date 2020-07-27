@@ -1,5 +1,9 @@
+
+
 class SpellChecker {
-  
+  constructor(){
+  }
+
   checker(text){
     var wordArray = text.split(" ")
     var checkedArray = []
@@ -16,7 +20,6 @@ class SpellChecker {
 
   library(text){
     var correctWords = ["is", "my", "name", "jo"]
-
     if(!correctWords.includes(text)){
       return `~${text}~`
     } else {
@@ -25,4 +28,3 @@ class SpellChecker {
   }
 };
 
-// .library(text)
