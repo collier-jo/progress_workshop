@@ -40,6 +40,7 @@ Input | output |
 " 2 / 1 " | ["2 / 1", 2]
 "1" | ["1", 1]
 "my sum is 1 + 1" | raise error: "Input must be a valid mathematical string separated by spaces"
+2 + 2 | raise error: "Argument error: input must be a sting| 
 
 spaces = error 
 oyutput result be a number 
