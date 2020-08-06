@@ -19,4 +19,8 @@ describe("StringCalculator", function(){
     it("More than two numbers in sum", function(){
       expect(stringCalc.calculate("2 + 2 + 2")).toEqual(["2 + 2 + 2", 6])
     });
+
+    it("More than two numbers in sum", function(){
+      expect(stringCalc.calculate("2 + 2 + 2 + 2")).toEqual(["2 + 2 + 2 + 2", 8])
+    });
 })
