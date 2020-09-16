@@ -20,7 +20,7 @@ Supply spring
 |"done1" | "Invalid Input: You should use add or done with a space after" (string)
 |"Done 1" | 1. Cat Vet 
 
-1. Get milk/n
+1. Get milk\n
 2. Cat vet 
 
 ## Domain Model:

@@ -1,22 +1,30 @@
 class TodoList {
   constructor(){
     this.list = []
-    this.index = 0
   }
+  todo(text){
+    var userInputArray = text.split(" ")
 
+    if(userInputArray[0] === "add"){
+      userInputArray.splice(0,1)
+      var todo = userInputArray.join(" ")
+      
+      this.list.push(todo)
 
-  add(text){
-    this.index ++
-    this.list.push(`${this.index}. ${text}`)
+      var format = ""
 
-    var viewList = ""
+      this.list.forEach((element, index) => {
+        format += `${index + 1}. ${element}\n` 
+      })
 
-    this.list.forEach(element => 
-      viewList += element + "\n"
-    )
+      console.log(format)
 
-    return viewList
-    
-    
+      return format
+
+    } else {
+      return "Invalid Input: You should use add or done with a space after"
+    }
+
   }
 }
+
