@@ -4,6 +4,12 @@ class TodoList {
   }
   todo(text){
     var userInputArray = text.split(" ")
+    // var variable = (userInputArray[0] === "add") ? (this._add(userInputArray)) : ((userInputArray[0] === "done") ? (this._delete(userInputArray)) : ("Invalid Input: You should use add or done with a space after"))
+
+    // var x = (userInputArray[0] === "add") ? this._add(userInputArray) : (userInputArray[0] === "done") ? this._delete(userInputArray) : "Invalid Input: You should use add or done with a space after";
+
+    // var answer = userInputArray[0] === "add" ? this._add(userInputArray) : (userInputArray[0] === "done" ? this._delete(userInputArray) : "Invalid Input: You should use add or done with a space after")
+      
 
     if(userInputArray[0] === "add") {
       this._add(userInputArray)
@@ -38,4 +44,3 @@ class TodoList {
   }
 }
 
-//var variable = (condition) ? (true block) : ((condition2) ? (true block2) : (else block2))
