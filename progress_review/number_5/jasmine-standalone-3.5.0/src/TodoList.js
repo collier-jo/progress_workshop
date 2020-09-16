@@ -19,6 +19,20 @@ class TodoList {
 
       return format
 
+    } else if(userInputArray[0] === "done"){
+      var itemNumber = userInputArray[1] - 1
+      this.list.splice(itemNumber, 1)
+
+      var format = ""
+
+      this.list.forEach((element, index) => {
+        format += `${index + 1}. ${element}\n` 
+      })
+
+      return format
+
+
+
     } else {
       return "Invalid Input: You should use add or done with a space after"
     }
