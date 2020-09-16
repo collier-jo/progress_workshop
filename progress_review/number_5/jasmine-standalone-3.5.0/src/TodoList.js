@@ -17,8 +17,6 @@ class TodoList {
         format += `${index + 1}. ${element}\n` 
       })
 
-      console.log(format)
-
       return format
 
     } else {
