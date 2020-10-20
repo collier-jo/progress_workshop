@@ -31,8 +31,16 @@ describe("School Report", function() {
     expect(schoolReport.simpleResults("1 5")).toEqual("Uncountable: 1")
   })
 
-  it("1 lone uncountable string given ", () => {
+  it("Missing comma to return uncountable ", () => {
     expect(schoolReport.simpleResults("70, 1 5")).toEqual("Green: 1\nUncountable: 1")
+  })
+
+  it("Missing comma to return uncountable ", () => {
+    expect(schoolReport.simpleResults("1, 5, 70, 1 5, 50")).toEqual("Green: 1\nAmber: 1\n Red: 2\nUncountable: 1")
+  })
+
+  it("empty string", () => {
+    expect(schoolReport.simpleResults(" ")).toEqual("Uncountable: 1")
   })
 });
 

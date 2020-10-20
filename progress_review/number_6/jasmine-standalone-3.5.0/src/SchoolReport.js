@@ -1,41 +1,48 @@
 class SchoolReport{
 
-  simpleResults(arg){
-
-
-    const numberList = arg.split(",")
-
-    // argument this could be a constructor 
-    let catagories = {
+  constructor(){
+    this.catagories = {
       Green: 0,
       Amber: 0,
       Red: 0,
       Uncountable: 0
     }
-     
-    let results = []
+  }
 
-// move into private function 
+  simpleResults(arg){
+    const numberList = arg.split(",")
+    this._catagoriseNumbers(numberList)
+    let finalResults = this._compleFinalResults().join("\n")
+
+    return finalResults
+  }
+
+  _catagoriseNumbers(numberList){
+
     numberList.forEach(item => {
-      if(item <= 49){
-        catagories["Red"] += 1
+      if(item === " "){
+        this.catagories["Uncountable"] += 1
+      } else if(item <= 49){
+        this.catagories["Red"] += 1
       } else if(item <= 69){
-        catagories["Amber"] += 1
+        this.catagories["Amber"] += 1
       } else if(item >= 70){
-        catagories["Green"] += 1
+        this.catagories["Green"] += 1
       } else {
-        catagories["Uncountable"] += 1
+        this.catagories["Uncountable"] += 1
       }
     }) 
+  }
 
-  // move into private function 
-    for(const property in catagories){
-      if(catagories[property] >= 1){
-        results.push(`${property}: ${catagories[property]}`) 
+  _compleFinalResults(){
+    let results = []
+
+    for(const property in this.catagories){
+      if(this.catagories[property] >= 1){
+        results.push(`${property}: ${this.catagories[property]}`) 
       }
     }
-
-    return results.join("\n")
+    return results
   }
 
 }
