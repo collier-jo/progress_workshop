@@ -22,4 +22,23 @@ describe("School Report", function() {
   it("Takes 3 number string and outputs all catagorises", () => {
     expect(schoolReport.simpleResults("1,50,70")).toEqual("Green: 1\nAmber: 1\nRed: 1")
   })
+
+  it("counts how many of each catagory", () => {
+    expect(schoolReport.simpleResults("1,1,50,50,70,70")).toEqual("Green: 2\nAmber: 2\nRed: 2")
+  })
+
+  it("1 lone uncountable string given ", () => {
+    expect(schoolReport.simpleResults("1 5")).toEqual("Uncountable: 1")
+  })
+
+  it("1 lone uncountable string given ", () => {
+    expect(schoolReport.simpleResults("70, 1 5")).toEqual("Green: 1\nUncountable: 1")
+  })
 });
+
+// Advice: 
+// - Naming the arg a name relavent such as 
+// - Working with grades and ranges of grade so edge cases would be 
+//   - Empty string 
+//   - Negative numbers 
+// - Never handed out strong ut
